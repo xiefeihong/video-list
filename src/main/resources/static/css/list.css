@@ -1,0 +1,32 @@
+#list {
+    margin:0 auto;
+    width: 98%;
+}
+.video_info {
+    margin-left: 3px;
+    margin-right: 3px;
+    float:left;
+    width: 454px;
+}
+.video {
+    margin-left: 2px;
+    width: 450px;
+    height: 360px;
+}
+.text {
+    margin-left: 2px;
+    width: 450px;
+}
+.text p {
+    float: left;
+    height: 50px;
+    margin-left: 50px;
+    width: 250px;
+}
+.text a {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 50px;
+    width: 100px;
+}

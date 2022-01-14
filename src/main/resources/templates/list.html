@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:text="'Index of ' + ${videoUrl} + ${page}"></title>
+    <link rel="stylesheet" type="text/css" th:href="${baseUrl} + 'css/list.css'">
+<!--    <link rel="stylesheet" type="text/css" href="css/list.css">-->
+</head>
+<body>
+<h1 th:text="'Index of /file/' + ${page} + '/'"></h1>
+<hr>
+<a th:href="${baseUrl}">../</a>
+<div id="list">
+    <div class="video_info" th:each="video : ${videoInfos}">
+        <video class="video" th:src="${videoUrl} + ${page} + '/' + ${video.path}" controls="controls" th:text="${video.path}"></video>
+        <div class="text">
+            <p th:text="${#temporals.format(video.date, 'dd/MMM/yyyy HH:mm')} + '&emsp;' + ${video.size} + 'M'"></p>
+            <a th:href="${videoUrl} + ${page} + '/' + ${video.path}">播放</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

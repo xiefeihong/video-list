@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Index of /file/</title>
+</head>
+<body>
+<h1>Index of /file/</h1>
+<hr>
+<a th:href="${baseUrl}">../</a>
+<pre th:each="folder : ${folderInfos}">
+    <a th:href="'/video/' + ${folder.path}" th:text="${folder.path}"></a>&emsp;&emsp;&emsp;<span th:text="${#temporals.format(folder.date, 'dd/MMM/yyyy HH:mm')}"></span>       -
+</pre>
+<hr>
+</body>
+</html>
